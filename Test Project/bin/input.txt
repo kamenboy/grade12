@@ -1,0 +1,6 @@
+Doctor,Kamen,Nikolov,45,120000,Cardiology,250
+Doctor,Anna,Anneva,38,115000,Neurology,300
+Nurse,Kalina,Kalinkova,35,60000,Pediatrics,120
+Nurse,Ivaylo,Ivaylov,42,65000,Surgery,150
+Janitor,Gardjo,Gardjev,50,30000,500
+Janitor,Evgeni,Evgeniev,37,32000,550
