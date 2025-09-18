@@ -1,0 +1,40 @@
+Create a project named Library with the following classes
+------------------------------------------------------------
+LibraryItem -> abstract class:
+title -> String
+author -> String
+itemId -> String
+isBorrowed -> boolean
+borrowItem() -> method - prints "Item '",title,"' has been borrowed" if isBorrowed is true
+and prints "Item '" , title , "' is already borrowed" if isBorrowed is false
+returnItem() -> method - prints "Item '", title , "' has been returned" if isBorrowed is false
+and "Item '" , title , "' is already borrowed" if isBorrowed is true.
+displayDetails() -> abstract method
+The implementation of the displayDetails() method displays the full information about the book
+--------------------------------------------------------------------
+class Book -> inherits from class LibraryItem:
+isbn -> String
+publisher -> String
+displayDetails() -> overridden method
+------------------------------------------------------------------------------------------
+class Library -> the main class to manage the catalog:
+catalog -> ArrayList<LibraryItem>
+addLibraryItem -> LibraryItem item
+removeItem(String itemId) -> method
+findItem(String itemId) -> method returns a LibraryItem object
+displayAllItems() -> method
+borrowItem(String itemId) -> method
+returnItem(String itemId) -> method
+The addLibraryItem(LibraryItem item) method adds a book to the catalog.
+The findItem(String itemId) method returns an item from the catalog by a given itemId, otherwise
+returns null.
+In the main function, a catalog is created, reading the books from a text file “books.txt”.
+Then a book is searched for, whose name is entered from the console
+Information is printed for the found book, including whether it has already been borrowed or
+returned.
+
+Input data
+„The Hunger Games“ „Suzanne Collins“ „978-0439023485“ „Scholastic Press“
+„Harry Potter and the Sorcerer's Stone“ „J.K. Rowling“ “978-0590353403“ „Scholastic Press“
+„To Kill a Mockingbird“ „Harper Lee“ „978-0061120084“ „Harper Perennial Modern Classics“
+„Sapiens: A Brief History of Humankind“ „Yuval Noah Harari“ „978-0062316091“ „HarperCollins“
